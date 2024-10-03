@@ -5,14 +5,14 @@ from fastapi import Depends
 
 from app.core.config import settings
 from app.core.google_client import get_service
-from app.utils.utils import FORMAT, LINK
+from app.utils.utils import FORMAT, LINK, HOUR, MINUTES, ZERO, HUNDRED, ELEVEN
 
 
 def format_duration(duration) -> dict[str, int]:
     """Форматирование длительности проекта."""
     days = duration.days
-    hours, remainder = divmod(duration.seconds, 3600)
-    minutes, seconds = divmod(remainder, 60)
+    hours, remainder = divmod(duration.seconds, HOUR)
+    minutes, seconds = divmod(remainder, MINUTES)
     return {
         "days": days,
         "hours": hours,
@@ -83,9 +83,9 @@ async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
             {
                 "properties": {
                     "sheetType": "GRID",
-                    "sheetId": 0,
+                    "sheetId": ZERO,
                     "title": "Лист1",
-                    "gridProperties": {"rowCount": 100, "columnCount": 11},
+                    "gridProperties": {"rowCount": HUNDRED, "columnCount": ELEVEN},
                 }
             }
         ],

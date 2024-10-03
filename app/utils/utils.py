@@ -1,6 +1,9 @@
 HUNDRED = 100
 ONE = 1
 ZERO = 0
+ELEVEN = 11
+MINUTES = 60
+HOUR = 3600
 NOT_EMPTY_FIELD = "Поле не может быть пустым!"
 USER_CREATED = "Имя занято другим пользователем."
 WRONG_PASSWORD = "Пароль не должен содержать адрес электронной почты"

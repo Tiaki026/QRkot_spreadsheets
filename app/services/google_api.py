@@ -5,7 +5,7 @@ from fastapi import Depends
 
 from app.core.config import settings
 from app.core.google_client import get_service
-from app.utils.utils import FORMAT
+from app.utils.utils import FORMAT, LINK
 
 
 def format_duration(duration) -> dict[str, int]:
@@ -94,7 +94,7 @@ async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
         service.spreadsheets.create(json=spreadsheet_body)
     )
     print(
-        f"https://docs.google.com/spreadsheets/d/{response['spreadsheetId']}"
+        LINK + f"{response['spreadsheetId']}"
     )
     return response["spreadsheetId"]
 

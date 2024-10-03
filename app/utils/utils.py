@@ -12,3 +12,8 @@ LOW_SUM = ("Запрещено уменьшение суммы инвестир�
            "если она больше текущего уровня!")
 PROJECT_ALREADY_EXISTS = "Название проекта занято другим проектом!"
 FORMAT = "%Y/%m/%d %H:%M:%S"
+SCOPES = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive",
+]
+LINK = "https://docs.google.com/spreadsheets/d/"

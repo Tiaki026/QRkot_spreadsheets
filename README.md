@@ -19,7 +19,8 @@
 
 <details>
 <summary>:mag: Спойлер</summary>
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/71578eaf-5210-447b-87f1-b7110f1dfdb4)
+
 </details>
 
 ### Пожертвования

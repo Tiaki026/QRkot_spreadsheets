@@ -50,7 +50,8 @@ async def get_spreadsheets(
     """Получение списка всех отчётов на Google Диске.
     Только для суперпользователя."""
     spreadsheets = await get_delete_service(wrapper_services)
-
+    for spreadsheet in spreadsheets:
+        await set_user_permissions(spreadsheet["id"], wrapper_services)
     return [spreadsheet["name"] for spreadsheet in spreadsheets]
 
 
@@ -67,8 +68,8 @@ async def delete_old_reports(
     spreadsheets = await get_delete_service(wrapper_services)
     service = await wrapper_services.discover("drive", "v3")
     for spreadsheet in spreadsheets[1:]:
+        await set_user_permissions(spreadsheet["id"], wrapper_services)
         await wrapper_services.as_service_account(
             service.files.delete(fileId=spreadsheet["id"])
         )
-
     return [spreadsheet["name"] for spreadsheet in spreadsheets[1:]]

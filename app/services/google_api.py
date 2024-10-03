@@ -127,9 +127,10 @@ async def spreadsheets_update_value(
         )
     )
 
+
 async def get_delete_service(
-        wrapper_services: Aiogoogle = Depends(get_service),
-):
+    wrapper_services: Aiogoogle = Depends(get_service),
+) -> list[dict[str, str]]:
     """Метод получения списка всех отчётов на Google Диске."""
     service = await wrapper_services.discover("drive", "v3")
     response = await wrapper_services.as_service_account(

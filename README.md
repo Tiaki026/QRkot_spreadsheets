@@ -16,7 +16,7 @@
 <details>
 <summary>:mag: Спойлер</summary>
   
-![image](https://github.com/user-attachments/assets/198d4361-f5d3-4b5d-9723-7729425be36e)
+![image](https://i.pinimg.com/originals/52/43/e6/5243e62fc5e182e2a9e262eeb6325d5f.gif)
 
 </details>
 

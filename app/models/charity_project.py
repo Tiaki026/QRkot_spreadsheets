@@ -1,6 +1,8 @@
 from sqlalchemy import Column, String, Text
-from .base import AbstractModel
+
 from app.utils.utils import HUNDRED
+
+from .base import AbstractModel
 
 
 class CharityProject(AbstractModel):

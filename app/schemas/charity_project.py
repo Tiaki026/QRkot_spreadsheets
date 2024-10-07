@@ -1,9 +1,9 @@
 from datetime import datetime
 from typing import Optional
 
-from pydantic import BaseModel, Field, validator, Extra, PositiveInt
+from pydantic import BaseModel, Extra, Field, PositiveInt, validator
 
-from app.utils.utils import HUNDRED, ONE, NOT_EMPTY_FIELD
+from app.utils.utils import HUNDRED, NOT_EMPTY_FIELD, ONE
 
 
 class CharityProjectUpdate(BaseModel):

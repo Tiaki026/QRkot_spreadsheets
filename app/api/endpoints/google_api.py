@@ -6,13 +6,11 @@ from app.api.endpoints.charity_project import get_all_projects
 from app.core.db import get_async_session
 from app.core.google_client import get_service
 from app.core.user import current_superuser
-
 from app.schemas.google_api import ProjectReport
 from app.services.google_api import (
-    spreadsheets_update_value,
-    set_user_permissions,
-    spreadsheets_create,
-    get_projects_by_completion_rate, get_delete_service,
+    get_delete_service, get_projects_by_completion_rate,
+    set_user_permissions, spreadsheets_create,
+    spreadsheets_update_value
 )
 
 router = APIRouter()

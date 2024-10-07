@@ -5,7 +5,10 @@ from fastapi import Depends
 
 from app.core.config import settings
 from app.core.google_client import get_service
-from app.utils.utils import FORMAT, LINK, HOUR, MINUTES, ZERO, HUNDRED, ELEVEN
+from app.utils.utils import (
+    FORMAT, HOUR,
+    LINK_GOOGLE_DOCS,MINUTES
+)
 
 
 def format_duration(duration) -> dict[str, int]:
@@ -83,11 +86,11 @@ async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
             {
                 "properties": {
                     "sheetType": "GRID",
-                    "sheetId": ZERO,
+                    "sheetId": 0,
                     "title": "Лист1",
                     "gridProperties": {
-                        "rowCount": HUNDRED,
-                        "columnCount": ELEVEN,
+                        "rowCount": 100,
+                        "columnCount": 11,
                     },
                 }
             }
@@ -96,7 +99,7 @@ async def spreadsheets_create(wrapper_services: Aiogoogle) -> str:
     response = await wrapper_services.as_service_account(
         service.spreadsheets.create(json=spreadsheet_body)
     )
-    print(LINK + f"{response['spreadsheetId']}")
+    print(LINK_GOOGLE_DOCS + {response['spreadsheetId']})
     return response["spreadsheetId"]
 
 

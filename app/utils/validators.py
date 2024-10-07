@@ -1,18 +1,13 @@
 from http import HTTPStatus
 
+from fastapi import HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.crud.charity_project import project_crud
 from app.models import CharityProject
-from fastapi import HTTPException
-
 from app.utils.utils import (
-    PROJECT_NOT_FOUND,
-    NO_DELETE_PROJECT,
-    NO_DELETE_CLOSED_PROJECT,
-    LOW_SUM,
-    PROJECT_ALREADY_EXISTS,
-    ZERO,
+    LOW_SUM, NO_DELETE_CLOSED_PROJECT, NO_DELETE_PROJECT,
+    PROJECT_ALREADY_EXISTS, PROJECT_NOT_FOUND, ZERO
 )
 
 

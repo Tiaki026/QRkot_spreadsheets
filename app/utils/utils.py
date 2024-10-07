@@ -19,4 +19,4 @@ SCOPES = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive",
 ]
-LINK = "https://docs.google.com/spreadsheets/d/"
+LINK_GOOGLE_DOCS = "https://docs.google.com/spreadsheets/d/"

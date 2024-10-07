@@ -1,10 +1,10 @@
 from datetime import datetime
-from typing import Union, Tuple
+from typing import Tuple, Union
 
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.models import Donation, CharityProject
+from app.models import CharityProject, Donation
 from app.utils.utils import ZERO
 
 

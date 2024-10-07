@@ -1,7 +1,9 @@
+from typing import Any, List, Optional, Type
+
 from fastapi.encoders import jsonable_encoder
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
-from typing import Optional, Any, Type, List
+
 from app.models import User
 
 

@@ -6,8 +6,7 @@ from fastapi import Depends
 from app.core.config import settings
 from app.core.google_client import get_service
 from app.utils.utils import (
-    FORMAT, HOUR,
-    LINK_GOOGLE_DOCS,MINUTES
+    FORMAT, HOUR, LINK_GOOGLE_DOCS, MINUTES
 )
 
 
